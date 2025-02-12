@@ -64,7 +64,6 @@ $sqlMedicamentos = $conexion->query("SELECT * FROM gestion_medicamentos");
             line-height: 65px;
             font-size: 18px;
             color: white;
-            padding-left: 40px;
             box-sizing: border-box;
             border-bottom: 1px solid black;
             border-top: 1px solid rgba(255, 255, 255, .1);

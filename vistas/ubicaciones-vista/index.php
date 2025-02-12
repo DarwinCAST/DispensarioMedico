@@ -45,7 +45,6 @@ include_once("/laragon/www/ProyectoDispensarioMedico/php/main.php");
             line-height: 65px;
             font-size: 18px;
             color: white;
-            padding-left: 40px;
             box-sizing: border-box;
             border-bottom: 1px solid black;
             border-top: 1px solid rgba(255, 255, 255, .1);
@@ -115,7 +114,7 @@ include_once("/laragon/www/ProyectoDispensarioMedico/php/main.php");
         <table class="table table-striped table-hover">
             <thead class="bg-info text-white">
                 <tr>
-                    <th scope="col">ID</th>
+                    <!-- <th scope="col">ID</th> -->
                     <th scope="col">Ubicacion</th>
                     <th scope="col">Estante</th>
                     <th scope="col">Tramo</th>
@@ -130,7 +129,7 @@ include_once("/laragon/www/ProyectoDispensarioMedico/php/main.php");
 
                 while ($datos = $sql->fetch_object()) { ?>
                     <tr>
-                        <th scope="row"><?= $datos->id_ubicacion ?></th>
+                        <!-- <th scope="row"><?= $datos->id_ubicacion ?></th> -->
                         <td><?= $datos->ubicacion ?></td>
                         <td><?= $datos->estante ?></td>
                         <td><?= $datos->tramo ?></td>

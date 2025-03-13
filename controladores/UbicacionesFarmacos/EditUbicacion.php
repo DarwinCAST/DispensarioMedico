@@ -6,14 +6,21 @@ if (!empty($_POST["registrar"])) {
         $tramo = $_POST["tramo"];
         $casilla = $_POST["casilla"];
 
-        $resultado_update = $conexion->query("UPDATE gestion_ubicaciones SET ubicacion = '$ubicacion'
+
+        //Validar que casilla sea un numero
+
+        if ($casilla >= 0 && is_nan($casilla)) {
+            $resultado_update = $conexion->query("UPDATE gestion_ubicaciones SET ubicacion = '$ubicacion'
         , estante = '$estante', tramo = '$tramo', casilla = 'casilla' WHERE id_ubicacion = $id");
 
-        if ($resultado_update) {
-            header("location: index.php");
-            exit();
-        } else {
-            echo '<div class= "alert alert-danger">Error al modificar marca</div>';
+            if ($resultado_update) {
+                header("location: index.php");
+                exit();
+            } else {
+                echo '<div class= "alert alert-danger">Error al modificar marca</div>';
+            }
+        } else{
+            echo '<div class= "alert alert-danger">Error al modificar Casilla, Asegurese que sea un numero</div>';
         }
     } else {
         echo '<div class= "alert alert-warning">Algunos de los campos esta vacio</div>';
@@ -21,4 +28,3 @@ if (!empty($_POST["registrar"])) {
 }
 
 ob_end_flush();
-?>

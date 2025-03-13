@@ -160,7 +160,9 @@ $sql = $conexion->query("select * from gestion_pacientes where id_paciente = $id
             <li><a href="../medicamentos-vista/index.php"><i class="fas fa-calendar-week"></i> Gestion de medicamentos</a></li>
             <li><a href="index.php"><i class="far fa-question-circle"></i> Gestion de pacientes</a></li>
             <li><a href="../medicos-vista/index.php"><i class="fas fa-sliders-h"></i> Gestion de medicos</a></li>
-            <li><a href="../visitas-vista/indexp.php"><i class="far fa-envelope"></i> Registro de visitas</a></li>
+            <li><a href="../visitas-vista/index.php"><i class="far fa-envelope"></i> Registro de visitas</a></li>
+            <li><a href="../../controladores/Login/CerrarSesion.php">Cerrar sesion</a></li>
+
         </ul>
     </div>
     <div class="content">

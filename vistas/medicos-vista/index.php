@@ -78,7 +78,7 @@ include_once("/laragon/www/ProyectoDispensarioMedico/php/main.php");
     <script src="https://kit.fontawesome.com/c35b649b73.js" crossorigin="anonymous"></script>
 </head>
 <script>
-    function eliminar(){
+    function eliminar() {
         let respuesta = confirm("Estas seguro que deseas eliminar?");
         return respuesta;
     }
@@ -95,13 +95,15 @@ include_once("/laragon/www/ProyectoDispensarioMedico/php/main.php");
             <li><a href="../pacientes-vista/index.php"><i class="far fa-question-circle"></i> Gestion de pacientes</a></li>
             <li><a href="index.php"><i class="fas fa-sliders-h"></i> Gestion de medicos</a></li>
             <li><a href="../visitas-vista/index.php"><i class="far fa-envelope"></i> Registro de visitas</a></li>
+            <li><a href="../../controladores/Login/CerrarSesion.php">Cerrar sesion</a></li>
+
         </ul>
     </div>
 
     <div class="content">
         <h2 class="text-center mb-4">Gestión de Medicos</h2>
         <?php
-        include("/laragon/www/ProyectoDispensarioMedico/controladores/Pacientes/DeletePaciente.php");
+        include("/laragon/www/ProyectoDispensarioMedico/controladores/Medicos/DeleteMedico.php");
 
         ?>
 
@@ -114,12 +116,12 @@ include_once("/laragon/www/ProyectoDispensarioMedico/php/main.php");
         <table class="table table-striped table-hover">
             <thead class="bg-info text-white">
                 <tr>
-                   <!--  <th scope="col">ID</th> -->
+                    <!--  <th scope="col">ID</th> -->
                     <th scope="col">Nombre</th>
                     <th scope="col">Cedula</th>
                     <th scope="col">Tanda</th>
                     <th scope="col">Especialidad</th>
-                    
+
 
                     <th scope="col" class="text-center">Acciones</th>
                 </tr>
@@ -142,7 +144,7 @@ include_once("/laragon/www/ProyectoDispensarioMedico/php/main.php");
                                 <i class="fas fa-edit"></i>
                             </a>
                             <a onclick="return eliminar() " href="index.php?id=<?= $datos->id_medico ?>" class="btn btn-danger btn-sm"">
-                                <i class="fas fa-trash-alt"></i>
+                                <i class=" fas fa-trash-alt"></i>
                             </a>
                         </td>
                     </tr>

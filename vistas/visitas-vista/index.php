@@ -94,13 +94,15 @@ include_once("/laragon/www/ProyectoDispensarioMedico/php/main.php");
             <li><a href="../pacientes-vista/index.php"><i class="far fa-question-circle"></i> Gestión de pacientes</a></li>
             <li><a href="../medicos-vista/index.php"><i class="fas fa-sliders-h"></i> Gestión de médicos</a></li>
             <li><a href="index.php"><i class="far fa-envelope"></i> Registro de visitas</a></li>
+            <li><a href="../../controladores/Login/CerrarSesion.php">Cerrar sesion</a></li>
+
         </ul>
     </div>
 
     <div class="content">
         <h2 class="text-center mb-4">Gestión de Registro de Visitas</h2>
         <?php
-        
+
         include("/laragon/www/ProyectoDispensarioMedico/controladores/RegistroVisitas/DeleteRegistro.php");
         ?>
         <div class="btn-create">
@@ -111,7 +113,7 @@ include_once("/laragon/www/ProyectoDispensarioMedico/php/main.php");
         <table class="table table-striped table-hover">
             <thead class="bg-info text-white">
                 <tr>
-                   <!--  <th scope="col">ID Registro</th> -->
+                    <!--  <th scope="col">ID Registro</th> -->
                     <th scope="col">Médico</th>
                     <th scope="col">Paciente</th>
                     <th scope="col">Fecha Visita</th>
@@ -133,21 +135,22 @@ include_once("/laragon/www/ProyectoDispensarioMedico/php/main.php");
                         rv.fecha_visita, 
                         rv.hora_visita, 
                         rv.sintomas, 
-                        rv.id_medicamento, 
+                        m.nombre AS nombre_medicamento, 
                         rv.recomendaciones
                     FROM registro_visitas rv
                     INNER JOIN gestion_medicos gm ON rv.id_medico = gm.id_medico
                     INNER JOIN gestion_pacientes gp ON rv.id_paciente = gp.id_paciente
+                    INNER JOIN gestion_medicamentos m ON rv.id_medicamento = m.id_medicamento
                 ");
                 while ($datos = $sql->fetch_object()) { ?>
                     <tr>
-                       <!--  <th scope="row"><?= $datos->id_registro ?></th> -->
+                        <!--  <th scope="row"><?= $datos->id_registro ?></th> -->
                         <td><?= $datos->nombre_medico ?></td>
                         <td><?= $datos->nombre_paciente ?></td>
                         <td><?= $datos->fecha_visita ?></td>
                         <td><?= $datos->hora_visita ?></td>
                         <td><?= $datos->sintomas ?></td>
-                        <td><?= $datos->id_medicamento ?></td>
+                        <td><?= $datos->nombre_medicamento ?></td>
                         <td><?= $datos->recomendaciones ?></td>
                         <td class="text-center">
                             <a href="edit.php?id=<?= $datos->id_registro ?>" class="btn btn-warning btn-sm">

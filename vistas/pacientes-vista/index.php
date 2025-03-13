@@ -78,7 +78,7 @@ include_once("/laragon/www/ProyectoDispensarioMedico/php/main.php");
     <script src="https://kit.fontawesome.com/c35b649b73.js" crossorigin="anonymous"></script>
 </head>
 <script>
-    function eliminar(){
+    function eliminar() {
         let respuesta = confirm("Estas seguro que deseas eliminar?");
         return respuesta;
     }
@@ -94,7 +94,9 @@ include_once("/laragon/www/ProyectoDispensarioMedico/php/main.php");
             <li><a href="../medicamentos-vista/index.php"><i class="fas fa-calendar-week"></i> Gestion de medicamentos</a></li>
             <li><a href="index.php"><i class="far fa-question-circle"></i> Gestion de pacientes</a></li>
             <li><a href="../medicos-vista/index.php"><i class="fas fa-sliders-h"></i> Gestion de medicos</a></li>
-            <li><a href="../visitas-vista/indexp.php"><i class="far fa-envelope"></i> Registro de visitas</a></li>
+            <li><a href="../visitas-vista/index.php"><i class="far fa-envelope"></i> Registro de visitas</a></li>
+            <li><a href="../../controladores/Login/CerrarSesion.php">Cerrar sesion</a></li>
+
         </ul>
     </div>
 
@@ -114,7 +116,7 @@ include_once("/laragon/www/ProyectoDispensarioMedico/php/main.php");
         <table class="table table-striped table-hover">
             <thead class="bg-info text-white">
                 <tr>
-                   <!--  <th scope="col">ID</th> -->
+                    <!--  <th scope="col">ID</th> -->
                     <th scope="col">Nombre</th>
                     <th scope="col">Cedula</th>
                     <th scope="col">No Carnet</th>
@@ -129,7 +131,7 @@ include_once("/laragon/www/ProyectoDispensarioMedico/php/main.php");
 
                 while ($datos = $sql->fetch_object()) { ?>
                     <tr>
-                       <!--  <th scope="row"><?= $datos->id_paciente ?></th> -->
+                        <!--  <th scope="row"><?= $datos->id_paciente ?></th> -->
                         <td><?= $datos->nombre_paciente ?></td>
                         <td><?= $datos->cedula_paciente ?></td>
                         <td><?= $datos->no_carnet ?></td>
@@ -141,7 +143,7 @@ include_once("/laragon/www/ProyectoDispensarioMedico/php/main.php");
                                 <i class="fas fa-edit"></i>
                             </a>
                             <a onclick="return eliminar() " href="index.php?id=<?= $datos->id_paciente ?>" class="btn btn-danger btn-sm"">
-                                <i class="fas fa-trash-alt"></i>
+                                <i class=" fas fa-trash-alt"></i>
                             </a>
                         </td>
                     </tr>

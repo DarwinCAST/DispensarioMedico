@@ -1,7 +1,7 @@
 <?php
 
 if (!empty($_POST["registrar"])) {
-    if (!empty($_POST["ubicacion"]) and !empty($_POST["estante"]) and !empty($_POST["tramo"]) and !empty($_POST["casilla"])) {
+    if (!empty($_POST["ubicacion"]) and !empty($_POST["estante"]) and !empty($_POST["tramo"] ) and !empty($_POST["casilla"])) {
         $ubicacion = $_POST["ubicacion"];
         $estante = $_POST["estante"];
         $tramo = $_POST["tramo"];

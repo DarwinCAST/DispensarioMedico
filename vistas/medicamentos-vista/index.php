@@ -122,6 +122,8 @@ include_once("/laragon/www/ProyectoDispensarioMedico/php/main.php");
                     <th scope="col">Marca</th>
                     <th scope="col">Ubicacion</th>
                     <th scope="col">Dosis</th>
+                    <th scope="col">Cantidad</th>
+
 
 
                     <th scope="col" class="text-center">Acciones</th>
@@ -137,7 +139,9 @@ include_once("/laragon/www/ProyectoDispensarioMedico/php/main.php");
                    gmar.nombre_marca, 
                    gubi.ubicacion, 
                    gubi.casilla, 
-                   gm.dosis
+                   gm.dosis,
+                   gm.cantidad
+
                FROM gestion_medicamentos gm
                INNER JOIN tipos_farmacos gf ON gm.id_farmaco = gf.id_farmaco
                INNER JOIN gestion_marcas gmar ON gm.id_marca = gmar.id_marca
@@ -153,6 +157,8 @@ include_once("/laragon/www/ProyectoDispensarioMedico/php/main.php");
                         <td><?= $datos->nombre_marca ?></td>
                         <td><?= $datos->ubicacion ?></td>
                         <td><?= $datos->dosis ?></td>
+                        <td><?= $datos->cantidad ?></td>
+
 
                         <td class="text-center">
                             <a href="edit.php?id=<?= $datos->id_medicamento ?>" class="btn btn-warning btn-sm">

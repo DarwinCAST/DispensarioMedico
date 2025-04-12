@@ -1,0 +1,8 @@
+{
+    "roboto": {
+        "italic": "C:\\laragon\\www\\ProyectoDispensarioMedico\\php\\libreria\\dompdf\\vendor\\dompdf\\dompdf\/lib\/fonts\/roboto_italic_6fe52bc5f04f4989a8b9a456c8ff1789",
+        "300": "C:\\laragon\\www\\ProyectoDispensarioMedico\\php\\libreria\\dompdf\\vendor\\dompdf\\dompdf\/lib\/fonts\/roboto_300_373f816e49d8622890f07d83ec8d9dab",
+        "normal": "C:\\laragon\\www\\ProyectoDispensarioMedico\\php\\libreria\\dompdf\\vendor\\dompdf\\dompdf\/lib\/fonts\/roboto_normal_19250a3c7a2346a578e91836ef344bb1",
+        "500": "roboto_500_947f3c107f46aee70a82dc5f0f0f422d"
+    }
+}

@@ -227,6 +227,11 @@ $sql = $conexion->query("SELECT * FROM gestion_medicamentos WHERE id_medicamento
                         <label for="dosis" class="form-label">Dosis</label>
                         <input type="text" class="form-control" id="dosis" name="dosis" value="<?= htmlspecialchars($datos->dosis) ?>" required>
                     </div>
+
+                    <div class="mb-3">
+                        <label for="cantidad" class="form-label">Cantidad</label>
+                        <input type="number" class="form-control" id="cantidad" name="cantidad" value="<?= htmlspecialchars($datos->cantidad) ?>" required>
+                    </div>
                 <?php } ?>
                 <button value="ok" name="registrar" type="submit" class="btn btn-primary w-100">Guardar</button>
             </form>

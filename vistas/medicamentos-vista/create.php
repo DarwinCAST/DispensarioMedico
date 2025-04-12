@@ -215,6 +215,11 @@
                     <label for="dosis" class="form-label">Dosis</label>
                     <input type="text" class="form-control" id="dosis" name="dosis" required>
                 </div>
+
+                <div class="mb-3">
+                    <label for="cantidad" class="form-label">Cantidad</label>
+                    <input type="number" class="form-control" id="cantidad" name="cantidad" required>
+                </div>
                 <button value="ok" name="registrar" type="submit" class="btn btn-primary w-100">Guardar</button>
             </form>
 

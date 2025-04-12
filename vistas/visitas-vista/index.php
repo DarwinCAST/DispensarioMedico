@@ -110,6 +110,12 @@ include_once("/laragon/www/ProyectoDispensarioMedico/php/main.php");
                 <i class="fas fa-plus"></i> Crear Registro de Visitas
             </a>
         </div>
+
+        <div class="btn-create">
+            <a href="./../../php/reportes.php" class="btn btn-success">
+                <i class="fas fa-plus"></i> Crear Reporte de Visitas
+            </a>
+        </div>
         <table class="table table-striped table-hover">
             <thead class="bg-info text-white">
                 <tr>
